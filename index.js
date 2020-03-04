@@ -666,9 +666,61 @@ if ("geolocation" in navigator) {
 		
 		console.log("MYGPS: ",latitude, ":", longitude)
 
+		var isNight = false
 		$.get("https://api.openweathermap.org/data/2.5/weather?lat=25.280511999999998&lon=51.4818048&appid=ef7a9e3daea088dde7ccfabce935787d&units=metric", function(data){
 			console.log("received data: ")
 			console.log(data)
+
+
+			var weather = data["weather"][0]
+			//// this will have {id, main, description, icon}
+
+			console.log("fetching daylight icon:", weather["icon"])
+
+			var dayCheck = weather["icon"].substring(weather["icon"].length - 1)
+
+			console.log("fetching daylight check:", dayCheck)
+			if (dayCheck === "n"){
+				isNight = true
+				/// TODO: NIGHTMODE
+				console.log("-----------------------------------NIGHT MODE ACTIVATE!")
+			}else{
+				isNight = false
+				/// TODO: DAYMODE
+				console.log("-----------------------------------DAY MODE ACTIVATE!")
+			}
+			console.log("weather caught : ", weather["id"])
+			var weatherID = weather["id"] / 100
+			/*
+				weather ID as following:
+				2 = thunderstorm
+				5 = rain
+				6 = snow
+				8 = clear
+				TODO: do more shit here, but for the time being
+				default: windy
+			*/
+
+			switch (weatherID){
+				case 2:
+					changeWeather(weather[3]);
+					break;
+				case 5:
+					changeWeather(weather[2]);
+					break;
+				case 6:
+					changeWeather(weather[0]);
+					break;
+				case 8:
+					changeWeather(weather[4]);
+					break;
+				default:
+					changeWeather(weather[1]);
+			}
+						
+
+
+		
 		})
     }
 
