@@ -501,11 +501,13 @@ function updateSummaryText()
 function updateTemperatureText(temp)
 {
 	temperature.html( temp + "<span>c</span>");
+	TweenMax.fromTo(temperature, 1.5, {x: 30}, {opacity: 1, x: 0, ease: Power4.easeOut});
 }
 
 function updateCountryName(city_name)
 {
-	temperature.html(city_name);
+	country.html(city_name);
+	TweenMax.fromTo(country, 1.5, {x: 30}, {opacity: 1, x: 0, ease: Power4.easeOut});
 }
 
 function startLightningTimer()
