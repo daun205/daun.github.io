@@ -750,13 +750,22 @@ if ("geolocation" in navigator) {
 			var curM = d.getMinutes();
 			var timeString = curH + ":" + curM
 
-			var curD = d.getDay()
+			var weekdays = new Array(7);
+			weekdays[0] = "Sunday";
+			weekdays[1] = "Monday";
+			weekdays[2] = "Tuesday";
+			weekdays[3] = "Wednesday";
+			weekdays[4] = "Thursday";
+			weekdays[5] = "Friday";
+			weekdays[6] = "Saturday";
+			var curD = weekdays[d.getDay()];
 			var curd = d.getDate()
+
 			var curm = d.getMonth()
 
 			console.log("day: ", d.getDay())
 
-			var dateString = curD + " " + curd + " " + curM
+			var dateString = curD + " " + curd + " " + curm
 
 			$("#date").html(dateString)
 			$("#time").html(timeString)
