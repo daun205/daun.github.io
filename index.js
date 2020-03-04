@@ -714,7 +714,7 @@ if ("geolocation" in navigator) {
 				TODO: do more shit here, but for the time being
 				default: windy
 			*/
-
+			console.log(weatherID)
 			switch (weatherID){
 				case 2:
 					changeWeather(weather[3]);
