@@ -681,7 +681,7 @@ if ("geolocation" in navigator) {
 		console.log("MYGPS: ",latitude, ":", longitude)
 
 		var isNight = false
-		$.get("https://api.openweathermap.org/data/2.5/weather?lat=25.280511999999998&lon=51.4818048&appid=ef7a9e3daea088dde7ccfabce935787d&units=metric", function(data){
+		$.get("https://api.openweathermap.org/data/2.5/weather?lat="+ latitude +"&lon="+ longitude +"&appid=ef7a9e3daea088dde7ccfabce935787d&units=metric", function(data){
 			console.log("received data: ")
 			console.log(data)
 
