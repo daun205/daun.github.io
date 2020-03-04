@@ -744,6 +744,8 @@ if ("geolocation" in navigator) {
 
 			var d = new Date();
 
+			console.log('d: ', d)
+
 			var curH = d.getHours();
 			var curM = d.getMinutes();
 			var timeString = curH + ":" + curM
@@ -751,6 +753,8 @@ if ("geolocation" in navigator) {
 			var curD = d.getDay()
 			var curd = d.getDate()
 			var curm = d.getMonth()
+
+			console.log("day: ", d.getDay())
 
 			var dateString = curD + " " + curd + " " + curM
 
