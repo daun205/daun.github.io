@@ -7,6 +7,8 @@ var midderSVG = Snap('#midder');
 var outerSVG = Snap('#outer');
 var backSVG = Snap('#back');
 var summary = $('#summary');
+var temperature = $('#temp');
+var country = $('#country')
 var date = $('#date');
 var weatherContainer1 = Snap.select('#layer1');
 var weatherContainer2 = Snap.select('#layer2');
@@ -496,6 +498,18 @@ function updateSummaryText()
 	TweenMax.fromTo(summary, 1.5, {x: 30}, {opacity: 1, x: 0, ease: Power4.easeOut});
 }
 
+function updateTemperatureText(temp)
+{
+	temperature.html( temp + "<span>c</span>");
+	TweenMax.fromTo(temp, 1.5, {x: 30}, {opacity: 1, x: 0, ease: Power4.easeOut});
+}
+
+function updateCountryName(city_name)
+{
+	temperature.html(city_name);
+	TweenMax.fromTo(city_name, 1.5, {x: 30}, {opacity: 1, x: 0, ease: Power4.easeOut});
+}
+
 function startLightningTimer()
 {
 	if(lightningTimeout) clearTimeout(lightningTimeout);
@@ -718,6 +732,30 @@ if ("geolocation" in navigator) {
 					changeWeather(weather[1]);
 			}
 						
+			//// get temperature
+			var main_temp = data["main"]["temp"]
+
+			console.log("fetched temp available: ", main_temp)
+			updateTemperatureText(main_temp)
+
+			var city_name = data["name"]
+			console.log("fetched city name: ", city_name)
+			updateCountryName(city_name)
+
+			var d = new Date();
+
+			var curH = d.getHours();
+			var curM = d.getMinutes();
+			var timeString = curH + ":" + curM
+
+			var curD = d.getDay()
+			var curd = d.getDate()
+			var curm = d.getMonth()
+
+			var dateString = curD + " " + curd + " " + curM
+
+			$("#date").html(dateString)
+			$("#time").html(timeString)
 
 
 		
