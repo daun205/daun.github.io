@@ -92,6 +92,14 @@ nav li a {
   position: absolute;
 }
 
+.nightmode {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%); 
+}
+
+.daymode {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%); 
+}
+
 .weather {
   background-color: #4700c2;
   transition: background-color 2s ease; }
@@ -105,9 +113,8 @@ nav li a {
   .weather #inner { /* This is where the Gradient go */
     background-color: white;
     /*  NIGHT MODE */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%); } */
     /* DAY MODE */
-    /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%); } */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%); }
   .weather .cloud {
     transition: fill 2s ease; }
   .weather #cloud1 {

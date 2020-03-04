@@ -697,11 +697,15 @@ if ("geolocation" in navigator) {
 			if (dayCheck === "n"){
 				isNight = true
 				/// TODO: NIGHTMODE
+
+				card.addClass("nightmode");
 				console.log("-----------------------------------NIGHT MODE ACTIVATE!")
 			}else{
 				isNight = false
 				/// TODO: DAYMODE
 				$(".weather").css({'background-color': '#42c0ff'})
+
+				card.addClass("daymode");
 				console.log("-----------------------------------DAY MODE ACTIVATE!")
 			}
 			console.log("weather caught : ", weather_data["id"])
