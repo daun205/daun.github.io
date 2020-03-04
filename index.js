@@ -717,15 +717,19 @@ if ("geolocation" in navigator) {
 			console.log(weatherID)
 			switch (weatherID){
 				case 2:
+					console.log("THUNDERRR")
 					changeWeather(weather[3]);
 					break;
 				case 5:
+					console.log("MAKE IT RAIN")
 					changeWeather(weather[2]);
 					break;
 				case 6:
+					console.log("SNOW SNOW SNOW")
 					changeWeather(weather[0]);
 					break;
 				case 8:
+					console.log("CLEARRRR")
 					changeWeather(weather[4]);
 					break;
 				default:
