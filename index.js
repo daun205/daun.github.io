@@ -760,8 +760,10 @@ if ("geolocation" in navigator) {
 			weekdays[6] = "Saturday";
 			var curD = weekdays[d.getDay()];
 			var curd = d.getDate()
-
-			var curm = d.getMonth()
+			const monthNames = ["January", "February", "March", "April", "May", "June",
+			"July", "August", "September", "October", "November", "December"
+		  	];
+			var curm = monthNames[d.getMonth()]
 
 			console.log("day: ", d.getDay())
 
