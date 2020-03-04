@@ -701,6 +701,7 @@ if ("geolocation" in navigator) {
 			}else{
 				isNight = false
 				/// TODO: DAYMODE
+				$(".weather").css({'background-color': '#42c0ff'})
 				console.log("-----------------------------------DAY MODE ACTIVATE!")
 			}
 			console.log("weather caught : ", weather_data["id"])
@@ -715,7 +716,7 @@ if ("geolocation" in navigator) {
 				default: windy
 			*/
 			console.log(weatherID)
-			switch (MaweatherID){
+			switch (weatherID){
 				case 2:
 					console.log("THUNDERRR")
 					changeWeather(weather[3]);

@@ -95,10 +95,10 @@ nav li a {
 .weather {
   background-color: #4700c2;
   transition: background-color 2s ease; }
-  .thunder .weather {
-    background-color: #9FA4AD; }
-  .rain .weather {
-    background-color: #D8D8D8; }
+  /* .thunder .weather { */
+    /* background-color: #9FA4AD; } */
+  /* .rain .weather { */
+    /* background-color: #D8D8D8; } */
   /* .sun .weather {
     background-color: #ccccff; }
      */
