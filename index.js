@@ -699,6 +699,7 @@ if ("geolocation" in navigator) {
 				/// TODO: NIGHTMODE
 
 				card.addClass("nightmode");
+				$("sunburst").hide();
 				console.log("-----------------------------------NIGHT MODE ACTIVATE!")
 			}else{
 				isNight = false
