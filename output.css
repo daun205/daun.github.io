@@ -111,7 +111,7 @@ nav li a {
     background-color: #ccccff; }
      */
   .weather #inner { /* This is where the Gradient go */
-    background-color: white;
+    /* background-color: white; */
     /*  NIGHT MODE */
   }
   .weather .cloud {
