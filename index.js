@@ -704,7 +704,7 @@ if ("geolocation" in navigator) {
 				console.log("-----------------------------------DAY MODE ACTIVATE!")
 			}
 			console.log("weather caught : ", weather_data["id"])
-			var weatherID = weather_data["id"] / 100
+			var weatherID = Math.floor(weather_data["id"] / 100)
 			/*
 				weather ID as following:
 				2 = thunderstorm
@@ -715,7 +715,7 @@ if ("geolocation" in navigator) {
 				default: windy
 			*/
 			console.log(weatherID)
-			switch (weatherID){
+			switch (MaweatherID){
 				case 2:
 					console.log("THUNDERRR")
 					changeWeather(weather[3]);
