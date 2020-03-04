@@ -672,12 +672,12 @@ if ("geolocation" in navigator) {
 			console.log(data)
 
 
-			var weather = data["weather"][0]
+			var weather_data = data["weather"][0]
 			//// this will have {id, main, description, icon}
 
-			console.log("fetching daylight icon:", weather["icon"])
+			console.log("fetching daylight icon:", weather_data["icon"])
 
-			var dayCheck = weather["icon"].substring(weather["icon"].length - 1)
+			var dayCheck = weather_data["icon"].substring(weather_data["icon"].length - 1)
 
 			console.log("fetching daylight check:", dayCheck)
 			if (dayCheck === "n"){
@@ -689,8 +689,8 @@ if ("geolocation" in navigator) {
 				/// TODO: DAYMODE
 				console.log("-----------------------------------DAY MODE ACTIVATE!")
 			}
-			console.log("weather caught : ", weather["id"])
-			var weatherID = weather["id"] / 100
+			console.log("weather caught : ", weather_data["id"])
+			var weatherID = weather_data["id"] / 100
 			/*
 				weather ID as following:
 				2 = thunderstorm
