@@ -12,17 +12,26 @@ html {
 
 body {
   background: #eee;
-  background: linear-gradient(0deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0)); }
-
-.background {
-  background: #eee;
-  background: linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0)); }
-
-.container {
+  /*background: linear-gradient(0deg, rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0)); */
+  /*padding: 100px;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.background {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  /*background: linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0)); */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*justify-content: center;*/
   margin: 0;
   padding: 0;
   height: 100%;
@@ -30,7 +39,7 @@ body {
   overflow: auto;
   position: relative;
   background: #eee;
-  background: linear-gradient(240deg, rgba(150, 50, 50, 0.3), rgba(0, 0, 200, 0)); }
+  background: linear-gradient(240deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)); }
 
 nav ul {
   margin: 20px 20px 0 20px;
@@ -49,14 +58,24 @@ nav li a {
   nav li a.active {
     color: #4444ff; }
 
+.left{
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.right{
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
 #card {
   box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   width: 100vw;
   padding: 0;
-  height: 100vh;
+  height: 80vh;
   min-height: 300px;
-  margin-top: 20px;
+  margin-top: 0px;
   border-radius: 5px;
   position: relative; }
   #card .details {
@@ -151,29 +170,31 @@ nav li a {
 #main_content{
   /* background-color: rgba(255,255,0,0.5); */
   position: absolute;
-  top: 300;
+  top: 400;
   left: 0;
   right: 0;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
+  justify-content: flex-end;
   align-items: center;
   font-weight: bold;
-  font-size: 72px;
+  font-size: 36px;
 
 }
 
 #main_content {
-  /* background: -webkit-linear-gradient(#f36626, #feab3a); */
-  background-image: linear-gradient(92deg, #f35626 0%,#fefe3a 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /*background: -webkit-linear-gradient(#f36626, #feab3a);*/
+  /*background-image: linear-gradient(92deg, #f35626 0%,#fefe3a 100%);*/
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: transparent;*/
+  color: white;
 
-  -webkit-animation: filter-animation 8s infinite;
-  animation: filter-animation 8s infinite;
+  /*-webkit-animation: filter-animation 8s infinite;*/
+  /*animation: filter-animation 8s infinite;*/
 }
-
+/*
 @-webkit-keyframes filter-animation {
   0% {
     -webkit-filter: hue-rotate(0deg);
@@ -200,4 +221,47 @@ nav li a {
   100% {
     filter: hue-rotate(0deg);
   }
+}*/
+
+#content_holder{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30%;
+  padding-bottom: 50px;
 }
+
+#icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#tabs{
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+
+  /*-webkit-background-clip: text;*/
+  /*-webkit-text-fill-color: white;*/
+}
+
+.round{
+  width: 30px;
+  height: 30px;
+  /* background-color: yellow; */
+  /* border-radius: 30px; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i{
+  font-size: 30px;
+}
+
+/* 
+.icons{
+  color: black;
+} */
